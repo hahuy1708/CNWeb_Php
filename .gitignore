@@ -1,0 +1,14 @@
+# Các file hệ thống
+.DS_Store
+Thumbs.db
+
+# Các thư mục XAMPP mặc định
+/dashboard/
+/img/
+/webalizer/
+/xampp/
+/applications/
+applications.html
+bitnami.css
+favicon.ico
+index.php
