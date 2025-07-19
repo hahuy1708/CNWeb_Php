@@ -1,0 +1,4 @@
+- Thẻ ```html<frame scr = "...">``` -> dùng để lấy dữ liệu trang khác
+- Trong Javascirpt, sự kiện **onClick** thực hiện khi click vào 1 đối tượng trong form
+ - **onblur** -> khi đối tượng trong form mất focus
+ - **onfocus** -> khi đối tượng trong form có focus
