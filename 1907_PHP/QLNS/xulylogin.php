@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 require_once("csdl.php");
 
 $username = $_POST['username'];
@@ -12,7 +15,8 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows === 1) {
-    header("Location: home.php?user=" . urlencode($username));
+    $_SESSION['user'] = $username;
+    header("Location: home.php");
 } else {
     echo "Sai tên đăng nhập hoặc mật khẩu. <a href='login.php'>Thử lại</a>";
 }

@@ -11,6 +11,7 @@ $result = $link->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Chèn thêm nhân viên</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h2>Chèn thông tin nhân viên</h2>
@@ -34,5 +35,7 @@ $result = $link->query($sql);
 
         <button type="submit">Thêm nhân viên</button>
     </form>
+    <br>
+    <a href="home.php">Quay lại trang chính</a>
 </body>
 </html>

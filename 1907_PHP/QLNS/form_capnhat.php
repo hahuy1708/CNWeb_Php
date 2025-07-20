@@ -27,6 +27,7 @@ $row = $result->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <title>Cập nhật phòng ban</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h2>Cập nhật thông tin phòng ban</h2>
