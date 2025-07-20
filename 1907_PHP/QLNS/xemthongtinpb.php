@@ -3,11 +3,6 @@ require_once("csdl.php");
 
 $sql = "SELECT * FROM phongban";
 
-$keyword = isset($_GET['keyword']) ? trim($_GET['keyword']) : '';
-
-if ($keyword != '') {
-    $sql .= " WHERE TenPB LIKE '%$keyword%' OR IDPB LIKE '%$keyword%'";
-}
 
 $result = mysqli_query($link, $sql);
 
@@ -29,19 +24,3 @@ mysqli_free_result($result);
 mysqli_close($link);
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Tìm kiếm nhân viên</title>
-</head>
-<body>
-
-<h2>Tìm kiếm phòng ban</h2>
-
-<form method="GET" action="xemthongtinpb.php">
-    <input type="text" name="keyword" placeholder="Nhập tên hoặc mã phòng ban" value="<?php echo htmlspecialchars($keyword); ?>">
-    <input type="submit" value="Tìm">
-</form>
-
-</body>
-</html>

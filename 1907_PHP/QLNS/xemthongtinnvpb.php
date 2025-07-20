@@ -1,7 +1,7 @@
 <?php
 require_once("csdl.php");
 
-$idpb = $_GET['IDPB'];
+$idpb = $_REQUEST['IDPB'];
 
 $sql = "Select * from nhanvien where IDPB = '$idpb'";
 $result = mysqli_query($link, $sql);
