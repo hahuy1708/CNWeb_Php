@@ -1,33 +1,27 @@
 <?php
-
 require_once("csdl.php");
 
 $thongbao = "";
+$count_xoa = 0;
 
-if (isset($_POST['IDNV']) && trim($_POST['IDNV']) !== "") {
-    // Lấy danh sách IDNV từ form, phân tách thành mảng
-    $idnv_list = explode(',', $_POST['IDNV']);
-    $placeholders = implode(',', array_fill(0, count($idnv_list), '?'));
-
-    // Tạo câu lệnh xóa với prepared statement
-    $sql = "DELETE FROM nhanvien WHERE IDNV IN ($placeholders)";
-    $stmt = $link->prepare($sql);
-
-    // Tạo kiểu dữ liệu cho bind_param
-    $types = str_repeat('s', count($idnv_list));
-    $stmt->bind_param($types, ...$idnv_list);
-
-    if ($stmt->execute()) {
-        $thongbao = "✅ Đã xoá thành công các nhân viên đã chọn! <a href='xoatatca.php'>Quay lại danh sách</a>";
-    } else {
-        $thongbao = "❌ Lỗi khi xoá: " . $stmt->error;
+$rs = mysqli_query($link, "SELECT IDNV FROM nhanvien");
+while ($row = mysqli_fetch_array($rs, MYSQLI_BOTH)) {
+    $id = $row['IDNV'];
+    // Nếu checkbox của nhân viên này được chọn
+    if (isset($_REQUEST[$id])) {
+        // Xoá nhân viên
+        mysqli_query($link, "DELETE FROM nhanvien WHERE IDNV='$id'");
+        $count_xoa++;
     }
-    $stmt->close();
+}
+mysqli_free_result($rs);
+$link->close();
+
+if ($count_xoa > 0) {
+    $thongbao = "✅ Đã xoá thành công $count_xoa nhân viên đã chọn! <a href='xoatatca.php'>Quay lại danh sách</a>";
 } else {
     $thongbao = "❌ Không có nhân viên nào được chọn để xoá. <a href='xoatatca.php'>Quay lại</a>";
 }
-
-$link->close();
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -53,17 +47,5 @@ $link->close();
     </div>
     <br>
     <a href="home.php">Quay lại trang chính</a>
-</body> 
+</body>
 </html>
-
-
-<?php
-require_once("csdl.php");
-$id = $_REQUEST['IDNV'];
-$dbselected = mysqli_select_db($link, "dulieu2");
-$rs = mysqli_query($link, "SELECT IDNV FROM nhanvien");
-while($row = mysqli_fetch_array($rs, MYSQLI_BOTH)) {
-    $myID = $_REQUEST[$row['IDNV']];
-    $rs = mysqli_query($link, "DELETE FROM nhanvien WHERE IDNV='$myID'");
-}
-?>

@@ -10,25 +10,19 @@ $result = $link->query("SELECT * FROM nhanvien");
     <title>Xoá nhiều nhân viên</title>
     <link rel="stylesheet" href="css/style.css">
     <script>
-    function submitDelete() {
-        // Lấy tất cả checkbox đã chọn
-        let checked = document.querySelectorAll('input[name="nv_check"]:checked');
+    function checkSubmit() {
+        let checked = document.querySelectorAll('input[type="checkbox"]:checked');
         if (checked.length === 0) {
             alert('Bạn chưa chọn nhân viên nào!');
             return false;
         }
-        if (!confirm('Bạn có chắc muốn xoá các nhân viên đã chọn?')) return false;
-        // Gom các IDNV thành chuỗi, phân cách bằng dấu phẩy
-        let ids = Array.from(checked).map(cb => cb.value).join(',');
-        document.getElementById('idnv_list').value = ids;
-        return true;
+        return confirm('Bạn có chắc muốn xoá các nhân viên đã chọn?');
     }
     </script>
 </head>
 <body>
     <h2>Chọn nhân viên để xoá</h2>
-    <form method="POST" action="xulyxoatatca.php" onsubmit="return submitDelete();">
-        <input type="hidden" name="IDNV" id="idnv_list" value="">
+    <form method="POST" action="xulyxoatatca.php" onsubmit="return checkSubmit();">
         <table border="1" cellpadding="5">
             <tr>
                 <th>Xoá</th>
@@ -40,12 +34,13 @@ $result = $link->query("SELECT * FROM nhanvien");
             <?php while ($row = $result->fetch_assoc()): ?>
             <tr>
                 <td>
-                    <input type="checkbox" name="nv_check" value="<?= $row['IDNV'] ?>">
+                    <!-- Checkbox với name là IDNV -->
+                    <input type="checkbox" name="<?= $row['IDNV'] ?>" value="1">
                 </td>
-                <td><?= $row['IDNV'] ?></td>
-                <td><?= $row['Hoten'] ?></td>
-                <td><?= $row['IDPB'] ?></td>
-                <td><?= $row['Diachi'] ?></td>
+                <td><?= ($row['IDNV']) ?></td>
+                <td><?= ($row['Hoten']) ?></td>
+                <td><?= ($row['IDPB']) ?></td>
+                <td><?= ($row['Diachi']) ?></td>
             </tr>
             <?php endwhile; ?>
         </table>
