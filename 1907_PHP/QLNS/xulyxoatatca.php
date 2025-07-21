@@ -52,4 +52,18 @@ $link->close();
         <?php echo $thongbao; ?>
     </div>
     <br>
-    <a href="home.php">Quay lại trang
+    <a href="home.php">Quay lại trang chính</a>
+</body> 
+</html>
+
+
+<?php
+require_once("csdl.php");
+$id = $_REQUEST['IDNV'];
+$dbselected = mysqli_select_db($link, "dulieu2");
+$rs = mysqli_query($link, "SELECT IDNV FROM nhanvien");
+while($row = mysqli_fetch_array($rs, MYSQLI_BOTH)) {
+    $myID = $_REQUEST[$row['IDNV']];
+    $rs = mysqli_query($link, "DELETE FROM nhanvien WHERE IDNV='$myID'");
+}
+?>
