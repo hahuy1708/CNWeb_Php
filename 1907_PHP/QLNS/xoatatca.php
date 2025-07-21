@@ -8,6 +8,7 @@ $result = $link->query("SELECT * FROM nhanvien");
 <head>
     <meta charset="UTF-8">
     <title>Xoá nhiều nhân viên</title>
+    <link rel="stylesheet" href="css/style.css">
     <script>
     function submitDelete() {
         // Lấy tất cả checkbox đã chọn
@@ -51,5 +52,7 @@ $result = $link->query("SELECT * FROM nhanvien");
         <br>
         <button type="submit">Xoá tất cả</button>
     </form>
+    <br>
+    <a href="home.php">Quay lại trang chính</a>
 </body>
 </html>

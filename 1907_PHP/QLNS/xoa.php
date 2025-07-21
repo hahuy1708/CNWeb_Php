@@ -8,6 +8,7 @@ $result = $link->query("SELECT * FROM nhanvien");
 <head>
     <meta charset="UTF-8">
     <title>Chọn nhân viên để xoá</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h2>Danh sách nhân viên</h2>
@@ -27,5 +28,7 @@ $result = $link->query("SELECT * FROM nhanvien");
         </tr>
         <?php endwhile; ?>
     </table>
+    <br>
+    <a href="home.php">Quay lại trang chính</a>
 </body>
 </html>

@@ -27,6 +27,9 @@ if (!isset($_SESSION['user'])) {
         <li><a href="xoa.php">Xóa 1 nhân viên bất kì</a></li>
         <li><a href="xoatatca.php">Xoá nhiều nhân viên cùng 1 lúc</a></li>
     </ul>
+    <form method="POST" action="logout.php">
+        <button type="submit">Đăng xuất</button>
+    </form>
     </div>
 
 </body>
