@@ -1,0 +1,115 @@
+/* Đặt font và bố cục tổng thể */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Tiêu đề chính */
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Liên kết */
+a {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 8px 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+a:hover {
+    background-color: #2c80b4;
+}
+
+/* Bảng dữ liệu */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Nút hành động */
+button, .btn {
+    background-color: #2980b9;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #1f6391;
+}
+
+/* Form nhập liệu */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Thanh thông báo */
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Căn giữa */
+.center {
+    text-align: center;
+}
+
+

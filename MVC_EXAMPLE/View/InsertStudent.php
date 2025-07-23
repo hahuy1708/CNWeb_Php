@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Thêm sinh viên</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <h2>Thêm sinh viên mới</h2>
@@ -20,5 +21,7 @@
     </form>
     <br>
     <p><a href="C_Student.php">Quay lại danh sách</a></p>
+    <br>
+    <p><a href="../index.php">Home page</a></p>
 </body>
 </html>
