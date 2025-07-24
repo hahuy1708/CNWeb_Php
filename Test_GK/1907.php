@@ -12,7 +12,7 @@ echo "<br>";
 ?>
 <?php
 $b = false;
-if($b = true)
+if($b = true) // Đây là phép gán, không phải so sánh
     print("true");
 else
     print("false");
@@ -22,7 +22,7 @@ echo "<br>";
 ?>
 <?php
 $array = array("a1" => 'x', "a2" => 'e', "a3" => 'z');
-ksort($array);
+ksort($array); // sắp xếp theo khoá key
 foreach($array as $key => $value){
     print "$key = $value\n";
 }
@@ -31,13 +31,13 @@ echo "--------------------------------------------------------------";
 echo "<br>";
 ?>
 <?php
-function b($a = 4){
+function b($a = 4){ 
     $a =  $a / 2;
     return $a;
 }
 $a = 10;
 b($a);
-echo $a;
+echo $a; // In ra 10, vì biến $a trong hàm b() là một bản sao của biến $a bên ngoài
 echo "<br>";
 echo "--------------------------------------------------------------";
 echo "<br>";
@@ -89,8 +89,8 @@ echo "--------------------------------------------------------------";
 echo "<br>";
 ?>
 <?php
-$a = array(10,20,'a','10hello','hello10');
-echo array_sum($a); 
+$a = array(10,20,'0','10Helo','hello10');
+echo array_sum($a);
 echo "<br>";
 echo "array_sum() sẽ cộng các giá trị số trong mảng, bỏ qua các giá trị không phải số";
 echo "<br>";
@@ -103,6 +103,21 @@ echo "<br>";
 echo "--------------------------------------------------------------";
 echo "<br>";
 ?>
-
+<?php
+echo (int) 'Billy123'; // -> 0 vì chuỗi bắt đầu bằng chữ cái
+echo "<br>";
+echo "--------------------------------------------------------------";
+echo "<br>";
+?>
+<?php
+switch(1){
+    case 1: print "one";
+    case 2: print "two";
+    default: print "default";
+}
+echo "<br>";
+echo "--------------------------------------------------------------";  
+echo "<br>";
+?>  
 
 
