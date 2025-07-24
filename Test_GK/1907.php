@@ -43,11 +43,11 @@ echo "--------------------------------------------------------------";
 echo "<br>";
 ?>
 <?php
-$a = 1;
-function test(){
-    echo "a = $a"; // Lỗi: biến $a không tồn tại trong phạm vi của hàm do $a không là biến global
-}
-test();
+//$a = 1;
+//function test(){
+//    echo "a = $a"; // Lỗi: biến $a không tồn tại trong phạm vi của hàm do $a không là biến global
+//}
+//test();
 echo "<br>";
 echo "--------------------------------------------------------------";
 echo "<br>";
@@ -84,4 +84,25 @@ $number = new number();
 foreach($number as $var => $value){
     echo "$value";
 }
+echo "<br>";
+echo "--------------------------------------------------------------";
+echo "<br>";
 ?>
+<?php
+$a = array(10,20,'a','10hello','hello10');
+echo array_sum($a); 
+echo "<br>";
+echo "array_sum() sẽ cộng các giá trị số trong mảng, bỏ qua các giá trị không phải số";
+echo "<br>";
+echo "--------------------------------------------------------------";
+echo "<br>";
+?>
+<?php
+echo (int) '1234Billy';
+echo "<br>";
+echo "--------------------------------------------------------------";
+echo "<br>";
+?>
+
+
+
