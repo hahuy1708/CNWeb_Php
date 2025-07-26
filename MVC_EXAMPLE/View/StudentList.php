@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- StudentList.php -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +12,7 @@
     <table>
         <tr>
             <th>STT</th>
-            <th>Tên sinh viên</th> <!-- StudentList.php -->
+            <th>Tên sinh viên</th> 
         </tr>
         <?php
         for ($i = 0; $i < sizeof($studentList); $i++) {

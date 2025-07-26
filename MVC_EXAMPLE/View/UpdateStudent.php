@@ -1,6 +1,6 @@
 <?php
 
-// filepath: c:\xampp\htdocs\MVC_EXAMPLE\View/UpdateStudent.php
+// View/UpdateStudent.php
 ?>
 <!DOCTYPE html>
 <html lang="en">

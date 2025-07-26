@@ -59,7 +59,7 @@ class Model_Student {
     $sql = "SELECT * FROM sinhvien WHERE 1";
 
     if (!empty($ID)) {
-        $sql .= " AND id = " . intval($ID);  // ✅ Thêm điều kiện tìm theo ID
+        $sql .= " AND id = " . intval($ID);  
     }
     if (!empty($Name)) {
         $sql .= " AND name LIKE '%" . mysqli_real_escape_string($this->link, $Name) . "%'";

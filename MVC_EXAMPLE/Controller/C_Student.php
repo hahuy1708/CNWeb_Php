@@ -64,7 +64,7 @@ class Ctrl_Student {
         $university = $_POST['university'] ?? '';
         $age = $_POST['age'] ?? '';
 
-        $studentList = $modelStudent->searchStudent($ID, $name, $age, $university); // ✅ truyền thêm $ID
+        $studentList = $modelStudent->searchStudent($ID, $name, $age, $university); 
     }
 
     include_once(__DIR__ . '/../View/SearchStudent.php');

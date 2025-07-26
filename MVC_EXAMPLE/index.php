@@ -1,11 +1,5 @@
 <?php
 
-
-// include_once 'Controller/C_Student.php';
-
-// $C_Student = new Ctrl_Student();
-// $C_Student->invoke();
-
 ?>
 
 <!DOCTYPE html>

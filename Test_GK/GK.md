@@ -68,6 +68,24 @@ D. Để thay đổi thuộc tính src của frame, sử dụng properties của
 
 - Làm sao để khởi động JavaScript trong HTML? -> ```<script> ... </script>``` 
 
+- Cho đoạn code:
+```
+var n = 6;
+m = n;
+switch(n){
+    case 5:
+    case 6:
+    case 7:
+        m = n >> 1;
+        break;
+    case 8:
+        m = n << 1;
+}
+document.write("m = ", m);
+```
+-> m =3
+
+
 - Chức năng chuyển 1 mảng thành 1 chuỗi là chức năng của hàm **implode**
     - **explode()** làm ngược lại: chuyển chuỗi thành mảng
 ```php
@@ -78,6 +96,7 @@ $chuoi = "apple,banana,orange";
 $mang = explode(",",$chuoi);
 ```
 - Đâu là chú thích được dùng trong PHP? 
+
 A. /* commented code here */ 
 
 B. // you are handsome 
@@ -144,7 +163,7 @@ D. ALL
 
 -> Đáp án đúng là C
 
-- SQL là viết tắt của **Structured Query Language**
+- **SQL** là viết tắt của **Structured Query Language**
 
 - **IAP** được viết tắt của từ -> **Internet Access Provider**
 
